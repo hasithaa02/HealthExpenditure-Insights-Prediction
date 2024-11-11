@@ -30,6 +30,11 @@ output = 'GHED_data.xlsx'
 gdown.download(url, output, quiet=False)
 file_path = output
 df = pd.read_excel(file_path)
+import urllib.request
+url = '"C:\Users\parth\Downloads\GHED_data.XLSX"'
+output = 'GHED_data.xlsx'
+urllib.request.urlretrieve(url, output)
+file_path = output
 
 # Initial Data Exploration
 print("First few rows of the dataset:")
