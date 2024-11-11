@@ -24,7 +24,11 @@ from sklearn.ensemble import RandomForestRegressor
 import streamlit as st
 
 # Load the dataset
-file_path = '//content/GHED_data.XLSX'
+import gdown
+url = 'YOUR_GOOGLE_DRIVE_FILE_URL'
+output = 'GHED_data.xlsx'
+gdown.download(url, output, quiet=False)
+file_path = output
 df = pd.read_excel(file_path)
 
 # Initial Data Exploration
